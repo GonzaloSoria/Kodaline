@@ -1,0 +1,228 @@
+@import 'variables';
+@import 'extends';
+
+/*estilos generales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-paragraph;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.titles-styles{
+    @extend %titles-styles;
+}
+/*fin estilos generales*/
+/*estilos navbar*/
+.navbar-color {
+    background-color: $navbar-bg;
+    // box-shadow: 0px 0px 15px black;
+    z-index: 100;
+    .container {
+        h1 {
+            a {
+                @extend %titles-styles;
+                color: black;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .navbar-toggler:focus {
+            outline: none;
+        }
+        div {
+            .nav-link {
+                transition: 1s;
+                color: #66656d;
+                font-size: 1.1rem;
+                font-family: 'Oswald', sans serif;
+
+                &:hover {
+                    color: #e4dcc7;
+                }
+            }
+        }
+    }
+}
+/*fin estilos navbar*/
+/*estilos slider*/
+.slider {
+    margin-top: 3rem;
+    width: 100%;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    div {
+        position: absolute;
+        top: 57%;
+        left: 50%;;
+        transform: translateX(-50%);
+        h2 {
+            @extend %titles-styles;
+            color: #ffffff;
+        }
+        p {
+            width: 45%;
+            margin: 20px 0px;
+            padding: 0px 10px;
+            color: #ffffff;
+            font-size: 1.2rem;
+            border-left: 3px solid #ffffff;
+            border-right: 3px solid #ffffff;
+            border-radius: 2px;
+        }
+        a {
+            @extend %anchor-button;
+            font-weight: bold;
+            color: #ffffff;
+            transition: .7s;
+            
+            &:hover {
+                color: black;
+                background: #ffffff;
+            }
+        }
+    }
+}
+/*fin estilos slider*/ 
+/*estilos canciones populares*/
+.songs-title-style {
+    font-family: $font-title;
+    color: $title-color;
+}
+/*fin estilos canciones populares*/
+//estilos banner datos
+.icon-datos {
+    font-size: $size-icon;
+}
+/*estilos discografia*/
+.discos {
+    div {
+        .img-container {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+.text-discos {
+    padding-top: 10px;
+    h2 {
+        font-family: $font-title;
+        color: $title-color;
+    }
+}
+}
+
+.discografia-subtitle {
+    font-family: $font-title;
+    color: $title-color;
+}
+/*fin estilos discografia*/ 
+/*estilos contacto*/ 
+.contacto-bg {
+    background-image: url('../Imagenes/contactobg.svg');
+    background-size: cover;
+}
+
+.box-transparente {
+    background: rgba(255, 255, 255, .1);
+}
+/*fin estilos contacto*/ 
+/*estilos banner*/ 
+.youtube {
+    i {
+        font-size: $size-icon;
+    }
+    a {
+        @extend %anchor-link;
+    }
+}
+
+.instagram {
+    i {
+        font-size: $size-icon;
+    }
+    a {
+        @extend %anchor-link;
+    }
+}
+
+.twitter {
+    i {
+        font-size: $size-icon;
+    }
+    a {
+        @extend %anchor-link;
+    }
+}
+/*fin estilos banner*/ 
+/*estilos footer*/ 
+.footer-background {
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+.footer-font {
+    font-family: 'Oswald', sans-serif;
+}
+
+.footer-link a {
+    text-decoration: none;
+    color: white;
+}
+
+.box-borde {
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.fa-envelope {
+    display: inline;
+}
+/*fin estilos footer*/ 
+/*estilos mobile*/ 
+@media only screen and (max-width: 980px) {
+    //estilos slider
+    .slider-title-center {
+        text-align: center;
+    }
+
+    .slider-text {
+        display: none;
+    }
+
+    .boton-mobile {
+        display: none !important;
+    }
+    //fin estilos slider
+    //estilos titulos y parrafos centrados
+    .title-mobile {
+        text-align: center;
+    }
+
+    .text-mobile-center {
+        text-align: center;
+    }
+    //fin estilos titulos y parrafos centrados
+    .ultimo-disco {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rounded-circle {
+        margin-bottom: 1rem;
+    }
+}
+
+
+    
+    

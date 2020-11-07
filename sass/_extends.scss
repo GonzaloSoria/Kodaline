@@ -1,0 +1,22 @@
+%titles-styles {
+    font-family: $font-title;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #8e5431;
+}
+
+%anchor-button {
+    display: block;
+    text-align: center;
+    width: 150px;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+}
+
+%anchor-link {
+    display: block;
+    text-decoration: none;
+    color: #444251;
+}
